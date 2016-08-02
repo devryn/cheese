@@ -1,0 +1,2 @@
+class UsercheesesController < ApplicationController
+end
