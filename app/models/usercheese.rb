@@ -1,4 +1,4 @@
 class Usercheese < ApplicationRecord
   belongs_to :user
-  has_many :cheeses
+  belongs_to :cheese
 end
