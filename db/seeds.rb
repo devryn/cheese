@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do
+  User.create!(username: Faker::Name.name, password: "password")
+end
+
+  Cheese.new(name: "Roquefort")
+  Cheese.new(name: "Camembert")
+  Cheese.new(name: "Chèvre")
+  Cheese.new(name: "Feta")
+  Cheese.new(name: "Mozzarella")
+  Cheese.new(name: "Cheddar")
+  Cheese.new(name: "Gouda")
+  Cheese.new(name: "Taleggio")
+  Cheese.new(name: "Parmigiano-Reggiano")
+  Cheese.new(name: "Monterey Jack")
