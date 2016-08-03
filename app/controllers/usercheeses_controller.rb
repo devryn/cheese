@@ -17,33 +17,23 @@ class UsercheesesController < ApplicationController
     end
   end
 
-  def new
-    render locals: {
-      usercheese: Usercheese.new
-    }
-  end
 
   def create
     usercheese = Usercheese.new(usercheese_params)
     if usercheese.save
-      redirect_to usercheese
+      redirect_to :usercheese
     else
-      render :new
+      redirect_to :back
     end
   end
 
-  def edit
-    render locals: {
-      usercheese: Usercheese.find(params[:id])
-    }
-  end
 
   def update
     if Usercheese.exists?(params[:id])
       usercheese.update(usercheese_params)
-      redirect_to usercheese
+      redirect_to :usercheese
     else
-      render :edit
+      redirect_to :back
     end
   end
 
@@ -59,6 +49,6 @@ class UsercheesesController < ApplicationController
 
 private
   def usercheese_params
-    params.require(:usercheese_params).permit(:user_name, :cheese_name)
+    params.require(:usercheese).permit(:user_name, :cheese_name)
   end
 end

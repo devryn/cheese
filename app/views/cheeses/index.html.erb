@@ -1,4 +1,6 @@
 <h1>Cheese!</h1>
 <% cheeses.each do |cheese| %>
-<%= cheese.name %>
+<ul>
+<li><h4><%= link_to cheese.name, cheese %></h4></li>
+</ul>
 <% end %>
