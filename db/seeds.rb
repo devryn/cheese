@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  User.create!(username: Faker::Name.name, password: "password")
+  User.create!(email: Faker::Internet.email, password: "password")
 end
 
   Cheese.new(name: "Roquefort")
