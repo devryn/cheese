@@ -1,14 +1,8 @@
-<h1><% Cheese.find(params[:id]) %>
-    <%= cheese.name %></h1>
-    <% if current_user %>
-    <%= link_to "Favorite",
-        usercheeses_path(usercheese: {
-          user_id: current_user.id,
-          cheese_id: cheese.id
-          }),
-          method: :POST,
-          class: "favorite btn",
-          remote: false %>
-          <% else %>
-          <p>You must be logged in to favorite cheeses.</p>
-          <% end %>
+<h1><%= cheese.name %></h1>
+<% if current_user %>
+  <%= react_component("Fave",
+                      cheese_id: cheese.id,
+                      user_id: current_user.id) %>
+<% else %>
+  <p>You must be logged in to favorite cheeses.</p>
+<% end %>
