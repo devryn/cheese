@@ -1,5 +1,8 @@
-<% users.each do |u| %>
-<ul>
-<%= link_to user.email, users %>
-<% end %>
-</ul>
+<h1>All Users</h1>
+  <div class='all-users'>
+    <% users.each do |u| %>
+    <ul>
+      <%= u.email %>
+    </ul>
+    <% end %>
+  </div>
