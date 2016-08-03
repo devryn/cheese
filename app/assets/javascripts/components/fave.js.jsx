@@ -30,6 +30,6 @@ var Fave = React.createClass({
   },
 
   render: function() {
-    return (<a className="favorite btn">F</a>avorite</a>;
+    return <a className="favorite btn">Favorite</a>;
   }
 });
